@@ -1,1 +1,3 @@
 This is a model of auditory cortex that was used in the manuscript "Mathematical framework for place coding in the auditory system" submitted to PLoS Computational biology and uploaded into BioRxiv. It is a 2 dimensional network with pyramidal cells and fast spiking interneurons.  The firing and synaptic properties and the network architecture are based on experimental data from Levy and Reyes, J. Neurosci 2012 and the model is a simplified version of the model in Levy and Reyes, PLoS Comp. 2011.  
+
+There are 2 Matlab files.  audCTX.m is the actual simulation and AudCTX_analysis.m is for analyzing the data.  
