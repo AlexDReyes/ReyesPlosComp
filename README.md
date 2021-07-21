@@ -6,12 +6,18 @@ Running audCTX.m
 1. Create a file that contains the connection matrices between E and I cells. To do this, specify the number of cells (line 5; total network size is ncells x ncells). Start off with ncells = 100 until you get used to the program as it may take a long time the network is too large.  Set RW (line 21) to 1 and specify a name for the file (line 26).  Run it once to create the file.  If you want to use the same connection schemes for subsequent simulations (it's faster if the network isn't made eac time), set RW to 0 and it will read the file specified on line 26.
 
 2. Setting parameters: 
+
 a. Specify a file name that will contain the data (line 25).
+
 b. "repetition" is number of sweeps.  For each run, the repetition number will be added to the file name.
+
 c. External input: The external input is a set of impulse trains converted to synaptic barrages and delivered to a set of E and I neurons.  The input is Gaussian distributed in space (X-Y plane; cells in the center of the Gaussian receives the largest input). 
+
   Two sets of excitatory inputs may be delivered to the network with standard deviations inSigmaA and inSigmaB (lies 10,11) with separation sepX (line 12).  The units are in cell number. To deliver a single input, set inSigma B to 0; doing so delivers a single input to the center of the network with standard deviaion inSigmaA. 
   The inhibitory input spread is specified by inSigmaI (line 17). There are two modes:
+  
 a. In the 'normal' mode (inhMode=0, line 18), the inhibition is aligned with the excitatory inputs.
+
 b. In the 'independent' mode (inhMode=1), the location of the inhibition can be uncoupled from the excitation (as in Fig. 7 of manuscript)
     1. To be able to vary the effective inhibitory sigma to the E cells, the I cells are bypassed and instead the thalamic inputs to I cells are converted to 
     inhibitory inputs to E cells.
