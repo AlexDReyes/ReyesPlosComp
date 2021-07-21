@@ -28,9 +28,9 @@ Running the analysis program AudCTX_analysis(baseName) where 'baseName' is the f
 1. The analysis program runs immediately after the simulation (line 30 of audCTX.m) but can be commented out and run separately.
 2. The program generates 3 graphs:
 
-  a. Figure 1 shows the locations of neurons that fired (blue dots), the outermost boundary of activated cells (red), and the fitted circle to the boundary (black).
+     a. Figure 1 shows the locations of neurons that fired (blue dots), the outermost boundary of activated cells (red), and the fitted circle to the boundary (black).
 
-  b. Figures 2 and 3 shows the excitatory and inhibitory conductances generated in the E cells.
+     b. Figures 2 and 3 shows the excitatory and inhibitory conductances generated in the E cells.
 
 3. The program calculates the mean (+/- SD) number of active spikes (meanArea, stdArea on line 12, 13), diameter of fitted circle of active cells (lines 14,15), diameter of the summed excitatory/inhibitory inputs (lines 16,17) that exceeded rheobase current (cThold, line 3, see Manuscript for details), the projection (lines 18,19) of the active cells on tonotopic axis (X axis), and the projection of the synaptic current that exceeded rheobase (lines 20,21).
 
