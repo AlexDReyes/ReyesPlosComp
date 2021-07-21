@@ -7,11 +7,11 @@ Running audCTX.m
 
 2. Setting parameters: 
 
-  a. Specify a file name that will contain the data (line 25).
+    a. Specify a file name that will contain the data (line 25).
 
-  b. "repetition" is number of sweeps.  For each run, the repetition number will be added to the file name.
+    b. "repetition" is number of sweeps.  For each run, the repetition number will be added to the file name.
 
-  c. External input: The external input is a set of impulse trains converted to synaptic barrages and delivered to a set of E and I neurons.  The input is Gaussian distributed in space (X-Y plane; cells in the center of the Gaussian receives the largest input). 
+    c. External input: The external input is a set of impulse trains converted to synaptic barrages and delivered to a set of E and I neurons.  The input is Gaussian distributed in space (X-Y plane; cells in the center of the Gaussian receives the largest input). 
 
   Two sets of excitatory inputs may be delivered to the network with standard deviations inSigmaA and inSigmaB (lines 10,11) with separation sepX (line 12).  The units are in cell number. To deliver a single input, set inSigma B to 0; doing so delivers a single input to the center of the network with standard deviaion inSigmaA. 
   
