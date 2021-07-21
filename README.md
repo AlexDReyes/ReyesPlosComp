@@ -13,7 +13,7 @@ b. "repetition" is number of sweeps.  For each run, the repetition number will b
 
 c. External input: The external input is a set of impulse trains converted to synaptic barrages and delivered to a set of E and I neurons.  The input is Gaussian distributed in space (X-Y plane; cells in the center of the Gaussian receives the largest input). 
 
-  Two sets of excitatory inputs may be delivered to the network with standard deviations inSigmaA and inSigmaB (lies 10,11) with separation sepX (line 12).  The units are in cell number. To deliver a single input, set inSigma B to 0; doing so delivers a single input to the center of the network with standard deviaion inSigmaA. 
+  Two sets of excitatory inputs may be delivered to the network with standard deviations inSigmaA and inSigmaB (lines 10,11) with separation sepX (line 12).  The units are in cell number. To deliver a single input, set inSigma B to 0; doing so delivers a single input to the center of the network with standard deviaion inSigmaA. 
   The inhibitory input spread is specified by inSigmaI (line 17). There are two modes:
   
 a. In the 'normal' mode (inhMode=0, line 18), the inhibition is aligned with the excitatory inputs.
@@ -23,14 +23,15 @@ b. In the 'independent' mode (inhMode=1), the location of the inhibition can be 
     inhibitory inputs to E cells.
     2. In this mode, inSigmaB should be set to zero. sepX(line 12) then sets the separaiton between inSigmaA and inSigmaI.
     3. To reproduce Fig. 8, you will need to manually set sepX to zero in line 293 and set inSigmaB to some non-zero value.
-    
+
+ANALYSIS
 Running the analysis program AudCTX_analysis(baseName) where 'baseName' is the file name specified in line 25 of audCTX.m, without the repeition number ("myFile")
 1. The analysis program runs immediately after the simulation (line 30 of audCTX.m) but can be commented out and run separately.
 2. The program generates 3 graphs:
 
-a. Figure 1 shows the locations of neurons that fired (blue dots), the outermost boundary of activated cells (red), and the fitted circle to the boundary (black).
+  a. Figure 1 shows the locations of neurons that fired (blue dots), the outermost boundary of activated cells (red), and the fitted circle to the boundary (black).
 
-b. Figures 2 and 3 shows the excitatory and inhibitory conductances generated in the E cells.
+  b. Figures 2 and 3 shows the excitatory and inhibitory conductances generated in the E cells.
 
 3. The program calculates the mean (+/- SD) number of active spikes (meanArea, stdArea on line 12, 13), diameter of fitted circle of active cells (lines 14,15), diameter of the summed excitatory/inhibitory inputs (lines 16,17) that exceeded rheobase current (cThold, line 3, see Manuscript for details), the projection (lines 18,19) of the active cells on tonotopic axis (X axis), and the projection of the synaptic current that exceeded rheobase (lines 20,21).
 
